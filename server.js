@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 // 2: Session code
 // 3: Views code
 app.set("views", "views");
-app.set("views engine", "ejs");
+app.set("view engine", "ejs");
 
 // 4: Routing code
 app.post("/create-item", (req, res) => {
