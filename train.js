@@ -1,15 +1,15 @@
 
-function countLetter(letter, emergency) {
-  let count = 0;
-  for (let i = 0; i < emergency.length; i++) {
-    if (emergency[i] === letter) {
-      count++;
-    }
-  }
-  return count;
-}
+// function countLetter(letter, emergency) {
+//   let count = 0;
+//   for (let i = 0; i < emergency.length; i++) {
+//     if (emergency[i] === letter) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
 
-console.log(countLetter("e", "emergency")); 
+// console.log(countLetter("e", "emergency")); 
 
 // NODE JS event  loop va CALLBACK functionlarni organamz!
 
@@ -117,3 +117,24 @@ console.log(countLetter("e", "emergency"));
 // MI TASK 
 
 // A-TASK: countLetter function
+
+
+// DEFINE
+function qoldiqliBolish(a, b, callback) {
+  if (b === 0) {
+    callback("Mahraj nolga teng emas!", null);
+  } else {
+    const c = a % b;
+    callback(null, c);
+  }
+}
+
+// CALL
+qoldiqliBolish(7, 5, (err, data) => {
+  if (err) {
+    console.log("ERROR:", err);
+  } else {
+    console.log("data:", data);
+    console.log("MANTIQLAR...");
+  }
+});
