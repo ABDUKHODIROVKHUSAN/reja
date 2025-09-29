@@ -36,3 +36,26 @@ document.getElementById("create-form")
       console.log("Iltimos qaytadan harkat qiling!");
    });
 });
+
+document.addEventListener("click", function(e) {
+   //delete oper
+   console.log(e.target);
+   if(e.target.classList.contains("delete-me")) {
+     if (confirm("Aniq ochirmoqchimisiz?")) {
+      axios
+      .post("/delete-item", { id: e.target.getAttribute("data-id") })
+      .then((respose) => {
+         console.log(respose.data);
+         e.target.parentElement.parentElement.remove();
+      })
+      .catch((err) => {
+         console.log("Iltimos qaytadan harkat qiling!");
+      });
+     }
+   }
+
+   //edit operation
+   if(e.target.classList.contains("edit-me")) {
+      alert("siz edit tugmasini bosdingiz");
+   }
+});
