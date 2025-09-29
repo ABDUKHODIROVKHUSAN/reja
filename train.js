@@ -15,20 +15,28 @@ class Shop {
   }
 
   sotish(nomi, soni) {
-    this[nomi] -= soni;
-    console.log(`${soni}ta ${nomi} sotildi`);
+    if(this[nomi]) {
+       this[nomi] -= soni;
+       console.log(`${soni}ta ${nomi} sotildi`);
+    } else {
+      console.log("bu tovar mavjud emas, mavjud bo'lgan tovarni kiriting!");
+    }
   }
 
   qabul(nomi, soni) {
-    this[nomi] += soni;
-    console.log(`${soni}ta ${nomi} qabul qilindi`);
+    if(this[nomi]) {
+      this[nomi] += soni;
+      console.log(`${soni}ta ${nomi} qabul qilindi`);
+    } else {
+      console.log("bu tovar mavjud emas, mavjud bo'lgan tovarni kiriting!");
+    }
   }
 }
 
 const shop = new Shop(20, 10, 35);
 
-shop.qoldiq();        
-shop.sotish("laptop", 5);
+        
+shop.sotish("non", 5);
 shop.qabul("printer", 7);
 shop.qoldiq();        
 
