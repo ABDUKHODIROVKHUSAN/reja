@@ -1,44 +1,60 @@
-// MIT C Task
+// MIT D 
 
-class Shop {
-  constructor(laptop, playstation, printer) {
-    this.laptop = laptop;
-    this.playstation = playstation;
-    this.printer = printer;
-  }
+function checkContent(str1, str2) {
+  // if (str1.length !== str2.length) return false;
+  let sorted1 = str1.split("").sort().join("");
+  let sorted2 = str2.split("").sort().join("");
 
-  qoldiq() {
-    const vaqt = new Date();
-    const soat = vaqt.getHours();
-    const minut = vaqt.getMinutes();
-    console.log(`Hozir ${soat}:${minut}da ${this.laptop}ta laptop, ${this.playstation}ta playstation va ${this.printer}ta printer mavjud`);
-  }
-
-  sotish(nomi, soni) {
-    if(this[nomi]) {
-       this[nomi] -= soni;
-       console.log(`${soni}ta ${nomi} sotildi`);
-    } else {
-      console.log("bu tovar mavjud emas, mavjud bo'lgan tovarni kiriting!");
-    }
-  }
-
-  qabul(nomi, soni) {
-    if(this[nomi]) {
-      this[nomi] += soni;
-      console.log(`${soni}ta ${nomi} qabul qilindi`);
-    } else {
-      console.log("bu tovar mavjud emas, mavjud bo'lgan tovarni kiriting!");
-    }
-  }
+  return sorted1 === sorted2;
 }
 
-const shop = new Shop(20, 10, 35);
+console.log(checkContent("mitgroup", "gmtiprou")); 
+console.log(checkContent("Ronaldo", "odlanoR"));         
+
+
+
+
+// // MIT C Task
+
+// class Shop {
+//   constructor(laptop, playstation, printer) {
+//     this.laptop = laptop;
+//     this.playstation = playstation;
+//     this.printer = printer;
+//   }
+
+//   qoldiq() {
+//     const vaqt = new Date();
+//     const soat = vaqt.getHours();
+//     const minut = vaqt.getMinutes();
+//     console.log(`Hozir ${soat}:${minut}da ${this.laptop}ta laptop, ${this.playstation}ta playstation va ${this.printer}ta printer mavjud`);
+//   }
+
+//   sotish(nomi, soni) {
+//     if(this[nomi]) {
+//        this[nomi] -= soni;
+//        console.log(`${soni}ta ${nomi} sotildi`);
+//     } else {
+//       console.log("bu tovar mavjud emas, mavjud bo'lgan tovarni kiriting!");
+//     }
+//   }
+
+//   qabul(nomi, soni) {
+//     if(this[nomi]) {
+//       this[nomi] += soni;
+//       console.log(`${soni}ta ${nomi} qabul qilindi`);
+//     } else {
+//       console.log("bu tovar mavjud emas, mavjud bo'lgan tovarni kiriting!");
+//     }
+//   }
+// }
+
+// const shop = new Shop(20, 10, 35);
 
         
-shop.sotish("non", 5);
-shop.qabul("printer", 7);
-shop.qoldiq();        
+// shop.sotish("non", 5);
+// shop.qabul("printer", 7);
+// shop.qoldiq();        
 
 
 
@@ -57,6 +73,8 @@ shop.qoldiq();
 // }
 
 // console.log(countLetter("e", "emergency")); 
+
+
 
 // MIT B TASK
 
