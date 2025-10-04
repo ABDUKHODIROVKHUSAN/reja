@@ -1,15 +1,22 @@
-// MIT D 
-
-function checkContent(str1, str2) {
-  // if (str1.length !== str2.length) return false;
-  let sorted1 = str1.split("").sort().join("");
-  let sorted2 = str2.split("").sort().join("");
-
-  return sorted1 === sorted2;
+// MIT E TASK
+function getReverse(str) {
+  return str.split('').reverse().join('');
 }
+console.log(getReverse("UZBEKISTAN")); 
 
-console.log(checkContent("mitgroup", "gmtiprou")); 
-console.log(checkContent("Ronaldo", "odlanoR"));         
+
+// // MIT D 
+
+// function checkContent(str1, str2) {
+//   // if (str1.length !== str2.length) return false;
+//   let sorted1 = str1.split("").sort().join("");
+//   let sorted2 = str2.split("").sort().join("");
+
+//   return sorted1 === sorted2;
+// }
+
+// console.log(checkContent("mitgroup", "gmtiprou")); 
+// console.log(checkContent("Ronaldo", "odlanoR"));         
 
 
 
