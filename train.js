@@ -1,8 +1,32 @@
-// MIT E TASK
-function getReverse(str) {
-  return str.split('').reverse().join('');
+// TASK F 
+function findDoublers(str) {
+  let letters = {};
+
+  for (let char of str) {
+    if (letters[char]) {
+      return true;
+    }
+    letters[char] = true;
+  } 
+  return false;
 }
-console.log(getReverse("UZBEKISTAN")); 
+
+console.log(findDoublers("hallowen")); 
+console.log(findDoublers("time"));  
+
+
+// // Example:
+
+// function getReverse(str) {
+//   return str.split('').reverse().join('');
+// }
+// console.log(getReverse("CAPTAIN"));
+
+// // MIT E TASK
+// function getReverse(str) {
+//   return str.split('').reverse().join('');
+// }
+// console.log(getReverse("UZBEKISTAN")); 
 
 
 // // MIT D 
